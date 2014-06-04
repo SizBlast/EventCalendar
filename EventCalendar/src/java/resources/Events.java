@@ -61,7 +61,7 @@ public class Events
     @Produces(MediaType.APPLICATION_JSON)
     public List<Event> getAllEventsByName(@QueryParam("q") String name) throws ParseException {
         TypedQuery<Event> tQuery = em.createNamedQuery("Event.findByName", Event.class);
-        tQuery.setParameter("name", name.toUpperCase());
+        tQuery.setParameter("name", "%" + name.toUpperCase() + "%");
         return tQuery.getResultList();
     }
     
@@ -70,7 +70,7 @@ public class Events
     @Produces(MediaType.APPLICATION_JSON)
     public List<Event> getAllEventsByPlace(@QueryParam("q") String place) throws ParseException {
         TypedQuery<Event> tQuery = em.createNamedQuery("Event.findByPlace", Event.class);
-        tQuery.setParameter("place", place.toUpperCase());
+        tQuery.setParameter("place", "%" + place.toUpperCase() + "%");
         return tQuery.getResultList();
     }
     

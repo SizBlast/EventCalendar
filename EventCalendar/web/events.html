@@ -51,33 +51,7 @@
                                 <a href="events.html"><span class="glyphicon glyphicon-th"></span>&#160;&#160;Alle evenementen</a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-search"></span>&#160;&#160;Zoeken op ...</a>
-                                <ul class="nav nav-second-level">
-                                    <li class="sidebar-search">
-                                        <div class="input-group custom-search-form">
-                                            <input type="text" class="form-control" placeholder="Naam">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                                            </span>
-                                        </div>
-                                    </li>
-                                    <li class="sidebar-search">
-                                        <div class="input-group custom-search-form">
-                                            <input type="text" class="form-control" placeholder="Plaats">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                                            </span>
-                                        </div>
-                                    </li>
-                                    <li class="sidebar-search">
-                                        <div id="sandbox-container" class="input-group custom-search-form">
-                                            <input type="text" class="form-control" placeholder="Datum">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                                            </span>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <a href="#"><span class="glyphicon glyphicon-search"></span>&#160;&#160;Zoeken op ...</a>
                             </li>             
                         </ul>
                     </div>
@@ -90,6 +64,16 @@
                         <h1>Evenementen <small>vanaf vandaag</small></h1>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="input-group col-lg-4">
+                        <input id="naam" type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button id="btnName" class="btn btn-primary">Naam</button>
+                        </span>
+                    </div>
+                </div>
+                <br>
+                <ul id="events" class="list-group"></ul>
             </div>     
         </div>
         

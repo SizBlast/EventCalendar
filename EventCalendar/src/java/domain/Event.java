@@ -2,6 +2,8 @@ package domain;
 
 import java.util.*;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import validation.ValidName;
 
 /**
  * @author Christof Van Cauteren
@@ -12,7 +14,7 @@ import javax.persistence.*;
 @NamedQueries({
     @NamedQuery(name = "Event.findAll", query = "SELECT e FROM Event e"),
     @NamedQuery(name = "Event.findByDate", query = "SELECT e FROM Event e WHERE e.date = :date"),
-    @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e WHERE upper(e.name) = :name"),
+    @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e WHERE upper(e.name) like :name"),
     @NamedQuery(name = "Event.findByPlace", query = "SELECT e FROM Event e WHERE upper(e.place) = :place")
 })
 @TableGenerator(name="tab", initialValue=0, allocationSize=50)
@@ -21,19 +23,19 @@ public class Event
     @GeneratedValue(strategy=GenerationType.TABLE, generator="tab")
     @Id
     private long id;
-    /*not null*/
+    @ValidName
     private String name;
     private String details;
-    /*not null*/
+    @NotNull(message = "Datum is verplicht.")
     @Temporal(TemporalType.DATE)
     private Date date;
-    /*not null*/
+    @NotNull(message = "Category is verplicht.")
     private String category;
-    /*not null*/
+    @NotNull(message = "Plaats is verplicht.")
     private String place;
-    /*not null*/
+    @NotNull(message = "Prijs is verplicht.")
     private int price;
-    /*not null*/
+    @NotNull(message = "Organisator is verplicht.")
     private String organizer;
     private String startHour;
     private String endHour;
