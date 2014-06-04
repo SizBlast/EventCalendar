@@ -4,6 +4,8 @@ onload = function(){
             todayBtn: "linked",
             language: "nl-BE",
             orientation: "auto",
+            todayHighlight: true,
+            startDate: "0d",
             autoclose: true
     });
 };
