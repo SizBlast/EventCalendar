@@ -15,7 +15,7 @@ import validation.ValidName;
     @NamedQuery(name = "Event.findAll", query = "SELECT e FROM Event e"),
     @NamedQuery(name = "Event.findByDate", query = "SELECT e FROM Event e WHERE e.date = :date"),
     @NamedQuery(name = "Event.findByName", query = "SELECT e FROM Event e WHERE upper(e.name) like :name"),
-    @NamedQuery(name = "Event.findByPlace", query = "SELECT e FROM Event e WHERE upper(e.place) = :place")
+    @NamedQuery(name = "Event.findByPlace", query = "SELECT e FROM Event e WHERE upper(e.place) like :place")
 })
 @TableGenerator(name="tab", initialValue=0, allocationSize=50)
 public class Event 

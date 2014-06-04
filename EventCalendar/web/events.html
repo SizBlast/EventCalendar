@@ -49,10 +49,7 @@
                             </li>
                             <li>
                                 <a href="events.html"><span class="glyphicon glyphicon-th"></span>&#160;&#160;Alle evenementen</a>
-                            </li>
-                            <li>
-                                <a href="#"><span class="glyphicon glyphicon-search"></span>&#160;&#160;Zoeken op ...</a>
-                            </li>             
+                            </li>          
                         </ul>
                     </div>
                 </div>
@@ -65,11 +62,29 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="input-group col-lg-4">
-                        <input id="naam" type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button id="btnName" class="btn btn-primary">Naam</button>
-                        </span>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <input id="naam" type="text" class="form-control" placeholder="Naam">
+                            <span class="input-group-btn">
+                                <button id="btnName" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div id="sandbox-container" class="input-group">
+                            <input id="datum" type="text" class="form-control" placeholder="Datum [dd/MM/yyyy]">
+                            <span class="input-group-btn">
+                                <button id="btnDate" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <input id="plaats" type="text" class="form-control" placeholder="Plaats">
+                            <span class="input-group-btn">
+                                <button id="btnPlace" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
                     </div>
                 </div>
                 <br>

@@ -41,6 +41,7 @@ public class EventReader implements MessageBodyReader<Event>
             Event e = new Event();
             JsonObject jsonEvent = in.readObject();
             e.setName(jsonEvent.getString("name", null));
+            e.setDetails(jsonEvent.getString("details", null));
             
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             String dateString = jsonEvent.getString("date", null);

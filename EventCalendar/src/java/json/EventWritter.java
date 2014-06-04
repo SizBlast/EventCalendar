@@ -40,6 +40,7 @@ public class EventWritter implements MessageBodyWriter<Event>
         JsonObjectBuilder jsonEvent = Json.createObjectBuilder();
         
         jsonEvent.add("name", t.getName());
+        jsonEvent.add("details", t.getDetails());
         
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         jsonEvent.add("date", sdf.format(t.getDate()));

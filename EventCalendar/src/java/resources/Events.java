@@ -50,7 +50,7 @@ public class Events
     @Produces(MediaType.APPLICATION_JSON)
     public List<Event> getAllEventsByDate(@QueryParam("q") String date) throws ParseException {
         TypedQuery<Event> tQuery = em.createNamedQuery("Event.findByDate", Event.class);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Date queryDate = sdf.parse(date);
         tQuery.setParameter("date", queryDate);
         return tQuery.getResultList();

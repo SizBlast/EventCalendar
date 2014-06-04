@@ -55,6 +55,7 @@ public class EventListWritter implements MessageBodyWriter<List<Event>>
         {
             JsonObjectBuilder jsonEvent = Json.createObjectBuilder();
             jsonEvent.add("name", e.getName());
+            jsonEvent.add("details", e.getDetails());
         
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             Date d = e.getDate();
